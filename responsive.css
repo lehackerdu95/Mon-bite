@@ -1,0 +1,71 @@
+body {
+    background-color: darkkhaki;
+}
+
+nav {
+    display: flex
+}
+
+nav li {
+    list-style-type: none;
+    margin: 10px
+    
+}
+
+nav li a {
+    background-color: aquamarine;
+    padding: 10px;
+    color: black;
+}
+
+div.burger {
+    width: 50px;
+    height: 50px;
+    background-image: url(Menu_burger.png);
+    background-size: cover;
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main div.boite {
+    width: 300px;
+    height: 200px;
+    background-color: yellow;
+    margin: 10px;
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        background-color: darkkhaki;
+    }
+
+    div.burger {
+        display: block;
+    }
+
+    div.close {
+        background-image: url(close.png);
+    }
+
+    main div.boite {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        display: none;
+    }
+
+    nav.open li {
+        display: flex;
+    }
+}

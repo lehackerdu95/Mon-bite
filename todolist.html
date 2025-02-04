@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <button id="submit">Ajouter</button>
+    <ol id="elements"></ol>
+
+    <script>
+        const ajouter = document.getElementById('submit')
+        const elements = document.getElementById('elements')
+        ajouter.addEventListener('click', () => {
+            const li = document.createElement('li')
+            li.textContent = document.getElementById ("text").value
+            elements.appendChild(li)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Jeu du juste prix</h2>
+
+    <input type="number" id="nombre">
+
+    <button id="submit">Envoyer</button>
+
+    <p id="message"></p>
+
+    <script>
+
+        const nombrehasard = Math.floor(Math.random() * 100) + 1
+
+        const submit = document.getElementById('submit')
+        const message = document.getElementById('message')
+
+        submit.addEventListener('click', () => {
+
+            // recuperer le champ "nombre"
+
+            const nombre = document.getElementById('nombre').value
+            if (nombre == nombrehasard) {
+                message.textContent = "Vous avez gagné !"
+            } else if (nombrehasard > nombre) {
+                message.textContent = "Plus grand"
+
+            } else {
+                message.textContent = "Moins grand"
+            }
+
+        })
+
+
+    </script>
+</body>
+
+</html>
